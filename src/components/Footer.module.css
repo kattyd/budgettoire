@@ -1,0 +1,57 @@
+.footer {
+    padding: 2rem;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #555;
+    font-size: 0.95rem;
+    margin-top: 4rem;
+}
+.footerLinks {
+    margin-bottom: 1rem;
+}
+.footer a {
+    color: #ff7849;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.socialIcons {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+.socialIcons a {
+    font-size: 1.4rem;
+    color: #2f3e46;
+    transition: color 0.3s;
+}
+.socialIcons a:hover {
+    color: #ff7849;
+}
+.newsletter {
+    margin-top: 2rem;
+}
+.newsletter input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 250px;
+    max-width: 90%;
+    margin-right: 0.5rem;
+}
+.newsletter button {
+    padding: 0.5rem 1rem;
+    background-color: #ff7849;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.newsletter button:hover {
+    background-color: #ff5e2e;
+}
