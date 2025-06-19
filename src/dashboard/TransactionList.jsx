@@ -24,7 +24,7 @@ function TransactionList({ transactions, onDelete }) {
                 {formatAmount(t.amount)}
               </div>
             </div>
-                        <button onClick={() => onDelete(index)} style={{ marginLeft: "10px" }}>
+                        <button onClick={() => onDelete(t.id)} style={{ marginLeft: "10px" }}>
                              ❌
                         </button>
                     </li>

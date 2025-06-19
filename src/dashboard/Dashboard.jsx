@@ -13,6 +13,7 @@ import {
 } from "firebase/firestore";
 import { signOut } from 'firebase/auth';
 import Navbar from "../components/Navbar";
+import { toast } from 'react-toastify';
 import Footer from "../components/Footer";
 import TransactionForm from './TransactionForm';
 import TransactionList from './TransactionList';
@@ -51,6 +52,7 @@ useEffect(() => {
 
   const handleAddTransaction = (transaction) => {
     setTransactions((prev) => [transaction, ...prev]);
+    toast.success("transaction added!");
   };
 
   const handleDelete = async (idToDelete) => {
@@ -59,8 +61,12 @@ useEffect(() => {
 
     try {
       await deleteDoc(doc(db, "transactions", idToDelete));
+      console.log("idToDelete:", idToDelete);
+      console.log("transactions list:", transactions);
       setTransactions((prev) => prev.filter((t) => t.id !== idToDelete));
+      toast.success("transaction deleted!");
     } catch (error) {
+      toast.error("error deleting transaction")
       console.error("Error deleting transaction:", error);
     }
   };
@@ -124,9 +130,8 @@ useEffect(() => {
             <TransactionList transactions={filteredTransactions} onDelete={handleDelete} />
           </div>
         </div>
-
-        <Footer />
     </div>
+    <Footer />
     </>
   );
 }

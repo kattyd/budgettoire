@@ -1,10 +1,11 @@
 .footer {
-    padding: rem;
+    width: 100%;
+    padding: 2rem;
     background-color: var(--primary);
     text-align: center;
     color: var(--primary);
     font-size: 0.95rem;
-    margin-top: 4rem;
+    box-sizing: border-box;
 }
 .footer a {
     color: var(--secondary);
