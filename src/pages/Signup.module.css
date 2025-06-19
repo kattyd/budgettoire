@@ -1,12 +1,13 @@
-.signupWrapper {
+.signUpWrapper {
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fdf6ec;
+    background-color: var(--light);
 }
 .form {
     background: #fff;
+    margin-top: 50px;
     padding: 2rem;
     border-radius: 16px;
     border: 2px solid #000;
@@ -15,6 +16,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 400px;
+    align-items: center;
 }
 .form h2 {
     font-size: 1.8rem;
@@ -23,14 +25,16 @@
 .form input {
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--primary);
     border-radius: 8px;
     font-size: 1rem;
 }
 .form button {
-    background-color: #ff7849;
-    color: #fff;
-    border: none;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    border-right: #000 3px solid;
+    border-bottom: #000 3px solid;
     padding: 0.75rem;
     border-radius: 8px;
     font-weight: bold;
@@ -38,13 +42,17 @@
     transition: background 0.2s ease;
 }
 .form button:hover {
-    background-color: #ff5e2e;
+    background-color: var(--light);
 }
 .form p {
     margin-top: 1rem;
     font-size: 0.95rem;
+    color: var(--primary);
 }
 .form a {
-    color: #ff7849;
+    color: var(--secondary);
     text-decoration: none;
+}
+.form a:hover {
+    text-decoration: underline;
 }

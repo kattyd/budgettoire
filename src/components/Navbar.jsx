@@ -2,15 +2,20 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+function Navbar({ hideAuthLinks }) {
     return (
         <nav className={styles.navbar}>
-            <div className={styles.logo}>budgettoire</div>
-            <div className={styles.navLinks}>
-                <Link to="/">home</Link>
-                <Link to="/login">login</Link>
-                <Link to="/signup">signup</Link>
+            <div className={styles.logo}>
+                <Link to="/">budgettoire</Link>
             </div>
+            {!hideAuthLinks && (
+                <div className={styles.navLinks}>
+                    <Link to="/login">login</Link>
+                    <button className={styles.signup}>
+                        <Link to="/signup">signup</Link>
+                    </button>
+                </div>
+            )}
         </nav>
     );
 };

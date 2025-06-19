@@ -5,10 +5,6 @@ import { FaTwitter, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div className={styles.footerLinks}>
-                <a href="#">privacy</a> | <a href="#">terms</a>
-            </div>
-
             <div className={styles.socialIcons}>
                 <a href="https://twitter.com" target="_blank" rel="noreferrer">
                     <FaTwitter />
@@ -29,10 +25,14 @@ const Footer = () => {
                 <input type="email" placeholder="your email"/>
                 <button>subscribe</button>
             </div>
-
-            <p style={{ marginTop: "2rem" }}>
+            <div className={styles.copyright}>
+            <p>
                 © {new Date().getFullYear()} Budgettoire. All rights reserved.
             </p>
+            </div>
+            <div className={styles.footerLinks}>
+                <a href="#">privacy</a> | <a href="#">terms</a>
+            </div>
         </footer>
     );
 };

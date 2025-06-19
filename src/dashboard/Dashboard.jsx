@@ -12,6 +12,8 @@ import {
   onSnapshot 
 } from "firebase/firestore";
 import { signOut } from 'firebase/auth';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import TransactionForm from './TransactionForm';
 import TransactionList from './TransactionList';
 import Summary from './Summary';
@@ -86,22 +88,17 @@ useEffect(() => {
 
   return (
     <>
-      <nav className="navbar">
-        <h1>budgettoire</h1>
-        <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#">about</a></li>
-          <li><button onClick={handleSignOut}>sign out</button></li>
-        </ul>
-      </nav>
+      <Navbar hideAuthLinks />
       <div className="container">
-        <h1>budgettoire</h1>
-        <p>track your income, expenses, and savings easily.</p>
-        {user && (
-          <div className="user-info">
-            <p>signed in as: <strong>{user.email}</strong></p>
-          </div>
-        )}
+        <div className="greeting">
+          <h1>welcome</h1>
+          <p>track your income, expenses, and savings easily.</p>
+          {user && (
+            <div className="user-info">
+              <p>signed in as: <strong>{user.email}</strong></p>
+            </div>
+          )}
+        </div>
         <select value={monthFilter} onChange={(e) => setMonthFilter(e.target.value)}>
           <option value="all">all months</option>
           {Array.from({ length: 12 }).map((_, i) => (
@@ -128,9 +125,7 @@ useEffect(() => {
           </div>
         </div>
 
-        <footer>
-          <p>© 2025 Budgettoire. Built with 💚 in Nigeria.</p>
-        </footer>
+        <Footer />
     </div>
     </>
   );

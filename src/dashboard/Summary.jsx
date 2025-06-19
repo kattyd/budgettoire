@@ -18,8 +18,8 @@ const Summary = ({ transactions }) => {
   return (
     <div className="summary-card">
       <h2>Balance: ₦{parseFloat(balance).toLocaleString()}</h2>
-      <p style={{ color: "#2ecc71" }}>Income: ₦{parseFloat(income).toLocaleString()}</p>
-      <p style={{ color: "#e74c3c" }}>Expense: ₦{Math.abs(expense).toLocaleString()}</p>
+      <p style={{ color: "#2ecc71", fontWeight: "bold"}}>Income: ₦{parseFloat(income).toLocaleString()}</p>
+      <p style={{ color: "#e74c3c", fontWeight: "bold" }}>Expense: ₦{Math.abs(expense).toLocaleString()}</p>
     </div>
   );
 };

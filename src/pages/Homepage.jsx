@@ -9,10 +9,10 @@ const Homepage = () => {
             <Navbar />
             <section className={styles.hero}>
                 <div className={styles.heroText}>
-                    <h1>track money, better future</h1>
+                    <h1>track money, <br></br>better future</h1>
                     <p>budget tracker for the greats</p>
                     <div className={styles.heroButtons}>
-                        <button>get started</button>
+                        <button><a href="/signup">get started</a></button>
                         <button className={styles.secondary}>learn more</button>
                     </div>
                 </div>
