@@ -49,11 +49,11 @@ const Homepage = () => {
                    </div>
                     <div className={styles.testimonialCard}>
                         <p>"budgettoire is the best! helped me understand where my money goes"</p>
-                        <footer>- Noyi, Designer</footer>
+                        <footer>- Lateefat, Student</footer>
                    </div>
                     <div className={styles.testimonialCard}>
                         <p>"budgettoire is the best! helped me understand where my money goes"</p>
-                        <footer>- Noyi, Designer</footer>
+                        <footer>- Ohex, Producer</footer>
                    </div>
                 </div>
             </section>

@@ -33,13 +33,13 @@
     color: var(--primary);
 }
 .signup {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem rem;
     border-radius: 28px;
     border: 1.5px solid #000;
     border-right: 4px #000 solid;
     border-bottom: 4px #000 solid;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin-right: 1rem;
+    margin-right: rem;
     background-color: var(--light);
     color: #000000;
     cursor: pointer;
