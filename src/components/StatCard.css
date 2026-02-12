@@ -1,0 +1,37 @@
+.stat-card {
+    flex: 1;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    width: 220px;
+    text-align: left;
+}
+.stat-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.stat-icon {
+    font-size: 1.4rem;
+}
+.stat-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+.stat-amount {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 8px 0;
+}
+.stat-change {
+    font-size: 0.9rem;
+}
+.stat-change.positive {
+    color: #05c705;
+}
+.stat-change.negative {
+    color: #e63946;
+}

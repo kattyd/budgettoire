@@ -88,7 +88,7 @@ form button:hover {
 }
 
 /* Summary styles */
-.summary-values {
+/* .summary-values {
   display: flex;
   justify-content: space-between;
   font-size: 1.1rem;
@@ -99,8 +99,14 @@ form button:hover {
 }
 .expense {
   color: #e74c3c;
-}
+} */
 
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
 /* Transaction List */
 .transaction-list h2 {
   font-size: 1.5rem;

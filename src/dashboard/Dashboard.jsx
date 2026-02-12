@@ -17,8 +17,10 @@ import { toast } from 'react-toastify';
 import Footer from "../components/Footer";
 import TransactionForm from './TransactionForm';
 import TransactionList from './TransactionList';
-import Summary from './Summary';
+// import Summary from './Summary';
+import StatCard from '../components/StatCard';
 import ChartView from './ChartView';
+import { FaWallet, FaArrowDown, FaArrowUp, FaPiggyBank } from 'react-icons/fa';
 import './Dashboard.css';
 
 const LOCAL_STORAGE_KEY = "naira-budget-buddy";
@@ -81,6 +83,12 @@ useEffect(() => {
           return date.getMonth() === parseInt(monthFilter);
         });
 
+    const totalIncome = filteredTransactions.filter((t) => t.type === "income").reduce((sum, t) => sum + Number(t.amount), 0);
+    const totalExpenses = filteredTransactions.filter((t) => t.type === "expense").reduce((sum, t) => sum + Number(t.amount), 0);    
+
+    const balance = totalIncome - totalExpenses;
+    const savings = totalIncome > 0 ? balance * 0.2 : 0;
+
     const handleSignOut = () => {
     signOut(auth)
     .then(() => {
@@ -114,8 +122,12 @@ useEffect(() => {
           ))}
         </select>
         <div className="row">
-          <div className="card summary-card">
-            <Summary transactions={filteredTransactions} />
+          <div className="row stats-row">
+            <StatCard title="Balance" amount={balance} icon={<FaWallet />} positive={balance >= 0} />
+            <StatCard title="Income" amount={totalIncome} icon={<FaArrowUp />} positive />
+            <StatCard title="Expenses" amount={totalExpenses} icon={<FaArrowDown />} positive={false} />
+            <StatCard title="Savings" amount={savings}  icon={<FaPiggyBank />} positive />
+            {/* <Summary transactions={filteredTransactions} /> */}
           </div>
           <div className="card form-card">
             <TransactionForm onAdd={handleAddTransaction} />
