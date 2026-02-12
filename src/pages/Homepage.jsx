@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./Homepage.module.css";
+import { Button, HStack } from "@/components/ui/button";
 
 const Homepage = () => {
     return (
@@ -56,6 +57,8 @@ const Homepage = () => {
                         <footer>- Ohex, Producer</footer>
                    </div>
                 </div>
+                <Button>join the fam</Button>
+                <Button>join the fam</Button>
             </section>
             <Footer />
         </div>
