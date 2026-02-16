@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+section {
+    margin: 0 116px;
+    max-width: 1512px;
+}
+.hero {
+    width: 1512px;
+    display: flex;
+    gap: 382px;
+    justify-content: space-between;
+    font-family: 'DM Sans', sans-serif;
+}
+.hero-content {
+    font-family: 'DM Sans', sans-serif;
+    padding-top: 132px;
+}
+.hero-content p {
+    width: 92px;
+    height: 26px;
+    background-color: #000;
+    color: var(--secondary);
+    border-radius: 4px;
+    padding: 1px 8px;
+}
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    line-height: 96%;
+}
+.hero-content text {
+    color: #6A6B71;
+}
+.hero-img {
+    height: 650px;
+}
+.cont {
+    padding-top: 40px;
+    display: flex;
+    gap: 24px;
+}
+.rating {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.rating .rating-text {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+}
+.cont button {
+    background-color: var(--light);
+    width: 191px;
+    height: 59px;
+    color: var(--base);
+    font-weight: 600;
+    font-size: 18px;
+    border: #000 1px solid;
+    border-right: #000 solid 3px;
+    border-bottom: #000 solid 3px;
+    border-radius: 18px;
+}
+.hero-bottom {
+    height: 166px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 362px;
+}
+.hero-bottom-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.hero-bottom-content h2 {
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: -4%;
+    display: flex;
+    align-self: center;
+}
+.hero-bottom .partners {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.partners img {
+    width: 109px;
+    height: 64px;
+}

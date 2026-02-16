@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 :root {
   --primary: #000;
-  --secondary: #b8f45d;
+  --secondary: #CAE062;
   --text: #ffffff;
-  --light: #6c63ff;
+  --light: #7248ee;
   --dark: #264653;
-  --base: #ffffff;
+  --base: #fcfbfc;
   --danger: #e63946;
-  --font-heading: 'EB Garamond', serif;
+  --font-heading: 'DM Sans', sans-serif;
 }
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--light);
+  background: var(--base);
   color: var(--primary);
   margin: 0;
   padding: 0;

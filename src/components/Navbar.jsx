@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-import { Link } from "react-router-dom";
+import { Link } from "@chakra-ui/react";
 
 function Navbar({ hideAuthLinks }) {
     return (
@@ -8,11 +8,18 @@ function Navbar({ hideAuthLinks }) {
             <div className={styles.logo}>
                 <Link to="/">budgettoire</Link>
             </div>
+            <div className={styles.links}>
+                    <Link to="/features">Features</Link>
+                    <Link to="/blog">Blog</Link>
+                    <Link to="/about">About</Link>
+            </div>
             {!hideAuthLinks && (
                 <div className={styles.navLinks}>
-                    <Link to="/login">login</Link>
+                    <button className={styles.login}>
+                        <Link to="/login">Login</Link>
+                    </button>
                     <button className={styles.signup}>
-                        <Link to="/signup">signup</Link>
+                        <Link to="/signup">Sign up</Link>
                     </button>
                 </div>
             )}

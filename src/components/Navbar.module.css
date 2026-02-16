@@ -2,20 +2,29 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 32.5px 40px;
     background-color: var(--base);
-    border-bottom: 1px solid #000;
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 10px;
+    height: 99px;
+    font-family: dm sans;
+    font-weight: 600;
+}
+.logo {
+    width: 307.5px;
 }
 .logo a {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-family: 'Calistoga', cursive;
+    font-size: 24px;
+    font-weight: 400;
     color: var(--light);
     text-decoration: none;
+}
+.links {
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
 }
 .navLinks{
     display: flex;
@@ -23,30 +32,32 @@
 }
 .navLinks a {
     text-decoration: none;
-    color: var(--light);
-    font-size: 0.8rem;
-    font-weight: bold;
     padding: 0.75rem 1.5rem;
     transition: color 0.3s;
 }
 .navLinks a:hover {
     color: var(--primary);
 }
-.signup {
-    padding: 0.75rem rem;
-    border-radius: 28px;
-    border: 1.5px solid #000;
-    border-right: 4px #000 solid;
-    border-bottom: 4px #000 solid;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    margin-right: rem;
+.login {
+    font-weight: 600;
+    font-size: 18px;
+    height: 59px;
+    width: 140px;
+}
+.signup {   
+    font-weight: 600;
+    font-size: 18px;
+    height: 59px;
+    width: 156px;
     background-color: var(--light);
-    color: #000000;
-    cursor: pointer;
+    border: #000 1px solid;
+    border-right: #000 solid 3px;
+    border-bottom: #000 solid 3px;
+    border-radius: 18px;
 }
 .signup:hover {
     background-color: var(--secondary);
 }
 .signup a {
-    color: var(--primary);
+    color: #fff;
 }

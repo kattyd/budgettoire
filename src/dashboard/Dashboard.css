@@ -27,11 +27,11 @@ h1 {
   text-align: center;
   font-family: var(--font-heading);
 }
-p {
+/* p {
   font-size: 1rem;
   color: var(--primary);
   font-style: italic;
-}
+} */
 .container select {
   margin-top: 1rem;
 }
