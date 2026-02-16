@@ -37,7 +37,7 @@ function Hero() {
                     <div className="partners">
                         <img src="src/assets/ApplePay.png" />
                         <img src="src/assets/Bitpay.png" />
-                        <img src="src/assets/PayPal.png" />
+                        <img src="src/assets/PayPal.svg" />
                         <img src="src/assets/Stripe.png" />
                     </div>
                 </div>
