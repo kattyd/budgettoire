@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-section {
-    margin: 0 116px;
-    max-width: 1512px;
-}
-.hero {
+.hero{
     width: 1512px;
     display: flex;
     gap: 382px;
-    justify-content: space-between;
+    justify-content: center;
     font-family: 'DM Sans', sans-serif;
+    margin: 0 116px;
+    max-width: 1512px;
 }
 .hero-content {
     font-family: 'DM Sans', sans-serif;
@@ -29,9 +27,6 @@ section {
 }
 .hero-content text {
     color: #6A6B71;
-}
-.hero-img {
-    height: 650px;
 }
 .cont {
     padding-top: 40px;
@@ -65,7 +60,6 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: 362px;
 }
 .hero-bottom-content {
     display: flex;

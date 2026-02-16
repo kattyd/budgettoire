@@ -3,14 +3,16 @@ import React from "react";
 import  "./FeatureCard1.css";
 
 function FeatureCard1() {
+    return (
     <>
-        <div className="card1">
-        </div>
-        <div className="card-content">
-            <p>WHAT WE DO</p>
-            <h2>Transfer funds to any currency.</h2>
-        </div>
-    </>
+            <div className="card1">
+            </div>
+            <div className="card-content">
+                <p>WHAT WE DO</p>
+                <h2>Transfer funds to any currency.</h2>
+            </div>
+        </>
+    )
 }
 
 export default FeatureCard1;

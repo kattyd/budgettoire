@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import  "./Hero.css";
 import { RatingGroup } from "@chakra-ui/react";
+import heroGif from "../assets/hero.gif";
+import applePay from "../assets/ApplePay.png";
+import bitPay from "../assets/Bitpay.png";
+import payPal from "../assets/PayPal.png";
+import stripe from "../assets/Stripe.png";
 
 function Hero() {
     return (
@@ -28,17 +33,17 @@ function Hero() {
                         </div>
                 </div>
                 <div className="hero-img">
-                    <img src="src/assets/hero.gif" alt="Hero Image" />
+                    <img src={heroGif} alt="Hero Image" />
                 </div>
             </section>
             <section className="hero-bottom">
                 <div className="hero-bottom-content">
                     <h2>Track money, better future</h2>
                     <div className="partners">
-                        <img src="src/assets/ApplePay.png" />
-                        <img src="src/assets/Bitpay.png" />
-                        <img src="src/assets/PayPal.svg" />
-                        <img src="src/assets/Stripe.png" />
+                        <img src={applePay} alt="Apple Pay" />
+                        <img src={bitPay} alt="BitPay" />
+                        <img src={payPal} alt="PayPal" />
+                        <img src={stripe} alt="Stripe" />
                     </div>
                 </div>
             </section>
