@@ -39,7 +39,7 @@ function Hero() {
             <section className="hero-bottom">
                 <div className="hero-bottom-content">
                     <h2>Track money, better future</h2>
-                    <div className="partners">
+                    <div className="partner-logos">
                         <img src={applePay} alt="Apple Pay" />
                         <img src={bitPay} alt="BitPay" />
                         <img src={payPal} alt="PayPal" />

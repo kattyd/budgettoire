@@ -1,40 +1,54 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import { FaTwitter, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXTwitter, faLinkedin, faThreads } from "@fortawesome/free-brands-svg-icons";
 
-const Footer = () => {
+function Footer() {
     return (
-        <footer className={styles.footer}>
-            <div className={styles.socialIcons}>
-                <a href="https://twitter.com" target="_blank" rel="noreferrer">
-                    <FaTwitter />
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noreferrer">
-                    <FaInstagram />
-                </a>
-                <a href="https://github.com" target="_blank" rel="noreferrer">
-                    <FaGithub />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                    <FaLinkedin />
-                </a>
+    <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+            <div className={styles.contentOne}>
+                <h2>Let us disturb you weekly</h2>
+                <div className={styles.email}>
+                    <input type="email" placeholder="Enter your email address" id="email" />
+                    <button>Subscribe</button>
+                </div>
             </div>
-
-            <div className={styles.newsletter}>
-                <p>join and let us disturb you weekly</p>
-                <input type="email" placeholder="your email"/>
-                <button>subscribe</button>
+            <hr  className={styles.divider}/>
+            <div className={styles.contentTwo}>
+                <div className={styles.partOne}>
+                    <h2>budgettoire</h2>
+                    <p>Don’t panic about your finances,
+                        stay zen with our state-of-the-art 
+                        budgeting features</p>
+                    <div className={styles.socials}>
+                        <FontAwesomeIcon icon={faXTwitter} />
+                        <FontAwesomeIcon icon={faLinkedin} />
+                        <FontAwesomeIcon icon={faThreads} />
+                    </div>
+                </div>
+                <div className={styles.footerLinks}>
+                    <div className={styles.homeGroup}>
+                        <a href="#">Home</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Personal</a>
+                        <a href="#">Business</a>
+                    </div>
+                    <div className={styles.featureGroup}>
+                        <a href="#">Features</a>       
+                        <a href="#">Get Started</a>       
+                        <a href="#">Privacy Policy</a>       
+                    </div>
+                    <div className={styles.socialGroup}>
+                        <a href="#">Socials</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Linkedin</a>
+                    </div>
+                </div>
             </div>
-            <div className={styles.copyright}>
-            <p>
-                © {new Date().getFullYear()} Budgettoire. All rights reserved.
-            </p>
-            </div>
-            <div className={styles.footerLinks}>
-                <a href="#">privacy</a> | <a href="#">terms</a>
-            </div>
-        </footer>
-    );
-};
+        </div>
+    </footer>
+    )
+}
 
 export default Footer;

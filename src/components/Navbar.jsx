@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import { Link } from "@chakra-ui/react";
 
+
 function Navbar({ hideAuthLinks }) {
     return (
         <nav className={styles.navbar}>

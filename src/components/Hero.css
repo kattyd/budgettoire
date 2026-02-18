@@ -2,10 +2,11 @@
 .hero{
     width: 1512px;
     display: flex;
+    flex-direction: row;
     gap: 382px;
     justify-content: center;
     font-family: 'DM Sans', sans-serif;
-    margin: 0 116px;
+    margin: 0 0 0 280px;
     max-width: 1512px;
 }
 .hero-content {
@@ -60,6 +61,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 80px;
 }
 .hero-bottom-content {
     display: flex;
@@ -73,12 +75,12 @@
     display: flex;
     align-self: center;
 }
-.hero-bottom .partners {
+.hero-bottom .partner-logos {
     display: flex;
     flex-direction: row;
     gap: 40px;
 }
-.partners img {
+.partner-logos img {
     width: 109px;
     height: 64px;
 }

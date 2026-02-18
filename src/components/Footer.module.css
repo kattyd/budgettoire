@@ -1,71 +1,95 @@
 .footer {
-    width: 100%;
-    padding: 2rem;
-    background-color: var(--primary);
-    text-align: center;
-    color: var(--primary);
-    font-size: 0.95rem;
-    box-sizing: border-box;
+    background-color: #7248ee;
+    height: 624px;
+    border-radius: 30px 30px 0px 0px;
 }
-.footer a {
-    color: var(--secondary);
-    text-decoration: none;
-    margin: 0 0.5rem;
+.contentOne {
+    display: flex;
+    flex-direction: row;
+    gap: 384px;
+    padding: 111px 280px;
 }
-.footer a:hover {
-    text-decoration: underline;
+.contentOne h2 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 100%;
+    color: #fff;
+    width: 398px;
 }
-.socialIcons {
-    margin: 1rem 0;
-    justify-content: space-between;
-    gap: 1.2rem;
+.contentOne .email {
+    display: flex;
+    gap: 30px;
 }
-.socialIcons a {
-    font-size: 1.4rem;
-    color: var(--text);
-    transition: color 0.3s;
-}
-.socialIcons a:hover {
-    color: var(--secondary);
-}
-.newsletter {
-    margin-top: 2rem;
-}
-.newsletter p {
-    color: var(--text);
-    font-size: 2rem;
-    font-weight: bold;
-    font-style: italic;
-}
-.newsletter input {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ccc;
+.contentOne .email input {
+    width: 330px;
+    height: 64px;
+    border: 1.5px solid #000;
     border-radius: 8px;
-    width: 250px;
-    max-width: 90%;
-    margin-right: 0.5rem;
+    padding: 0px 20px;
 }
-.newsletter button {
-    padding: 0.5rem 1rem;
+.contentOne .email button {
     background-color: var(--secondary);
-    color: var(--primary);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
+    width: 191px;
+    height: 64px;
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    border: #000 1.5px solid;
+    border-radius: 10px;
 }
-.newsletter button:hover {
-    background-color: #6c63ff;
+.divider {
+    width: 1332px;
+    justify-self: center;
+    display: flex;
+    margin-bottom: 80px;
 }
-.copyright p{
+.contentTwo {
+    display: flex;
+    flex-direction: row;
+    gap: 500px;
+    padding: 0 280px;
+}
+.contentTwo .partOne{
+    display: flex;
+    flex-direction: column;
+}
+.contentTwo h2 {
+    font-weight: 400;
+    font-size: 36px;
+    font-family: calistoga, cursive;
+    color: #fff;
+    line-height: 140%;
+    margin-bottom: 10px;
+}
+.contentTwo p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 140%;
+    width: 391px;
+    height: 41px;
+}
+.contentTwo .socials {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+    margin-top: 20px;
+    color: #fff;
+}
+.contentTwo .footerLinks {
+    display: flex;
     justify-content: space-between;
-    color: var(--text);
-    font-size: 1rem;
-    padding-left: 1rem;
+    gap: 100px;
 }
-
-@media (max-width: 768px) {
-    .newsletter button {
-        margin-top: 1rem;
-    }
+.homeGroup, .featureGroup, .socialGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.homeGroup a:first-child , .featureGroup a:first-child, .socialGroup a:first-child {
+    font-weight: 600;
+    color: #fff; /* Optional: Make it darker too */
 }

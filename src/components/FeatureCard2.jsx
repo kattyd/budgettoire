@@ -1,15 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import  "./FeatureCard1.css";
-import cardOne from "../assets/container1.png";
+import  "./FeatureCard2.css";
+import cardTwo from "../assets/container2.png";
 
-function FeatureCard1() {
+function FeatureCard2() {
     return (
-    <section className="feature-card1">
-            <div className="card1">
-                <img src={cardOne} alt="Card Image" />
-            </div>
-            <div className="card-content">
+    <section className="feature-card2">
+        <div className="card-content">
                 <p>WHAT WE DO</p>
                 <h2>Transfer funds to any currency.</h2>
                 <text>Don’t panic about your finances,
@@ -19,8 +16,11 @@ function FeatureCard1() {
                     <Link to="/features">See Our Rates</Link>
                 </button>
             </div>
+            <div className="card2">
+                <img src={cardTwo} alt="Card Image" />
+            </div>
         </section>
     )
 }
 
-export default FeatureCard1;
+export default FeatureCard2;

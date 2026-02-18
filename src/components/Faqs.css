@@ -1,0 +1,90 @@
+.faq-section {
+    padding: 60px 20px;
+    background-color: var(--base);
+    display: flex;
+}
+.faq-img {
+    display: flex;
+    margin-left: 280px;
+}
+.faq-container {
+    max-width: 624px;
+    margin: 0 32px;
+}
+.faq-container p {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 8px;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #000;
+    width: 51px;
+    height: 26px;
+    border-radius: 4px;
+    padding: 1px 10px;
+}
+.faq-container h2 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 96%;
+    letter-spacing: -4%;
+    margin-bottom: 40px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* The Individual Question Box */
+.faq-item {
+    border-bottom: 1px solid #ddd; /* Light divider line */
+    padding: 20px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* The Question Text Area */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* The Plus/Minus Icon */
+.arrow {
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+/* The Answer Area (Hidden by default) */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.faq-answer p {
+    margin-top: 10px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* --- ACTIVE STATE (When class 'open' is added) --- */
+
+/* 1. Reveal the answer */
+.faq-item.open .faq-answer {
+    max-height: 200px; /* Arbitrary large height to allow expansion */
+    opacity: 1;
+}
+
+/* 2. Rotate the arrow (Optional, if you use a chevron > instead of +/-) */
+/* .faq-item.open .arrow {
+    transform: rotate(180deg);
+} */
