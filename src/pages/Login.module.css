@@ -1,39 +1,133 @@
 .loginWrapper {
-    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--light);
+    flex-direction: column;
+    background-color: var(--base);
+    font-family: dm sans;
+    min-height: 100vh;
+    padding: 20px;
 }
+
+
 .form {
-    background: #fff;
-    margin-top: 50px;
-    padding: 2rem;
-    border-radius: 16px;
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 #000;
+    background: var(--base);
+    margin-top: 14px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
+}
+
+.form h2 {
+    font-size: clamp(22px, 5vw, 32px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.form label {
+    align-self: flex-start;
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+    padding: 0.75rem;
+    margin-bottom: 16px;
+    background-color: #f2f2f2;
+    color: #808080;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    border: none;
+}
+
+/* Remember + forgot row */
+.optionsRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-bottom: 19px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.fir {
+    display: flex;
     align-items: center;
 }
-.form h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+
+.rememberText {
+    margin-left: 0.5rem;
+    color: #000;
+    font-size: 12px;
 }
-.form input {
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid var(--primary);
-    border-radius: 8px;
-    font-size: 1rem;
+
+/* Switch */
+.switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    display: inline-block;
 }
-.form button {
-    background-color: var(--secondary);
-    color: var(--primary);
-    border: none;
-    padding: 0.85rem;
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    background-color: #e5e5e5;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.switch input:checked + .slider {
+    background-color: #7c5cff;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+.forgot {
+    color: #7c5cff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Login button */
+.form .log {
+    background-color: var(--light);
+    color: var(--base);
     border: var(--primary) 1px solid;
     border-right: 2px solid var(--primary);
     border-bottom: 2px solid var(--primary);
@@ -41,19 +135,63 @@
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s ease;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 20px;
 }
-.form button:hover {
-    background-color: var(--light);
+
+.form .log:hover {
+    background-color: #5a38e0;
 }
+
+/* Google button */
+.google {
+    background-color: #ffffff;
+    color: #818181;
+    border: var(--primary) 1px solid;
+    border-right: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.google:hover {
+    background-color: #e5e5e5;
+}
+
+.google img {
+    width: 16px;
+    height: 16px;
+}
+
 .form p {
-    margin-top: 1rem;
-    font-size: 0.95rem;
+    margin-top: 0;
+    font-size: 12px;
     color: var(--primary);
+    text-align: center;
 }
+
 .form a {
-    color: var(--secondary);
+    color: var(--light);
     text-decoration: none;
 }
+
 .form a:hover {
     text-decoration: underline;
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .loginWrapper {
+        padding: 40px;
+    }
 }

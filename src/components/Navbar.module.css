@@ -61,3 +61,11 @@
 .signup a {
     color: #fff;
 }
+.customText {
+    font-size: 16px;
+    font-family: dm sans;
+    font-style: bold;
+    line-height: 79%;
+    letter-spacing: -4%;
+    font-weight: 800;
+}

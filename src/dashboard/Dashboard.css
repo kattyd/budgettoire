@@ -70,7 +70,7 @@ form select {
   font-size: 1rem;
 }
 
-form button {
+.form-card button {
   background-color: var(--secondary);
   color: var(--primary);
   border: 1px solid #000;
