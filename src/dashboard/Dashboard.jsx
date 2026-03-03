@@ -102,7 +102,11 @@ useEffect(() => {
 
   return (
     <>
-      <Navbar hideAuthLinks />
+      <Navbar 
+                hideLinks={true} 
+                authMode="text" 
+                customText="track money, better future" 
+            />
       <div className="container">
         <div className="greeting">
           <h1>welcome</h1>
