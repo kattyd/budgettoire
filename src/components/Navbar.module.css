@@ -2,17 +2,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32.5px 40px;
+    padding: 0 40px;
     background-color: var(--base);
     position: sticky;
     top: 0;
     z-index: 1000;
     height: 99px;
-    font-family: dm sans;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 600;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .logo {
-    width: 307.5px;
+    flex-shrink: 0;
 }
 .logo a {
     font-family: 'Calistoga', cursive;
@@ -26,13 +28,13 @@
     gap: 40px;
     font-size: 18px;
 }
-.navLinks{
+.navLinks {
     display: flex;
     gap: 1.5rem;
+    align-items: center;
 }
 .navLinks a {
     text-decoration: none;
-    padding: 0.75rem 1.5rem;
     transition: color 0.3s;
 }
 .navLinks a:hover {
@@ -42,30 +44,67 @@
     font-weight: 600;
     font-size: 18px;
     height: 59px;
-    width: 140px;
+    width: 100px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 .signup {   
     font-weight: 600;
     font-size: 18px;
     height: 59px;
-    width: 156px;
+    width: 140px;
     background-color: var(--light);
     border: #000 1px solid;
     border-right: #000 solid 3px;
     border-bottom: #000 solid 3px;
     border-radius: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 .signup:hover {
     background-color: var(--secondary);
 }
 .signup a {
     color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 59px;
 }
 .customText {
     font-size: 16px;
-    font-family: dm sans;
-    font-style: bold;
-    line-height: 79%;
-    letter-spacing: -4%;
     font-weight: 800;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .links {
+        display: none; /* Hide middle links on smaller tablets/mobile to save space */
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0 20px;
+    }
+    .logo a {
+        font-size: 20px;
+    }
+    .navLinks {
+        gap: 0.5rem;
+    }
+    .login, .signup {
+        height: 45px;
+        font-size: 14px;
+    }
+    .login {
+        width: 70px;
+    }
+    .signup {
+        width: 100px;
+    }
+    .signup a {
+        line-height: 45px;
+    }
 }

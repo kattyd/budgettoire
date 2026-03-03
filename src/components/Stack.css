@@ -1,72 +1,59 @@
 .stack {
-   width: 1288px;
-    height: 399px;
-    display: flex;
+    width: 100%;
     margin-bottom: 120px;
+    padding: 0 20px;
 }
 .stack-content {
     display: flex;
     flex-direction: row;
-    gap: 12px;
-    margin: 0px 280px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.stack-1 {
-    width: 421.33px;
-    height: 399px;
+.stack-1, .stack-2, .stack-3 {
+    flex: 1; /* Automatically makes them equal width */
     background-color: #fff;
     border: 1px solid #dbdbdb;
     border-radius: 24px;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
 }
-.stack-1 h2 {
-    font-size: 40px;
+.stack-2 {
+    background-color: #ee4878;
+    color: #fff;
+}
+.stack-1 h2, .stack-2 h2, .stack-3 h2 {
+    font-size: 32px;
     font-weight: 600;
-    line-height: 112%;
+    line-height: 1.2;
     margin-bottom: 24px;
-    letter-spacing: -4%;
-    margin-top: 32px;
+    letter-spacing: -2px;
+    margin-top: 24px;
 }
 .stack-1 .subs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    padding: 38.17px;
+    margin-top: auto; /* pushes grid to bottom */
 }
 .sub-item {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
 }
 .sub-item img {
     width: 26px;
-    height: 24px;
+    height: auto;
 }
 .price {
     font-weight: 600;
     color: #6a6b71;
-    font-size: 24px;
-    line-height: 150%;
-    letter-spacing: -4%;
-}
-.stack-2 {
-    width: 421.33px;
-    height: 399px;
-    background-color: #ee4878;
-    border: 1px solid #dbdbdb;
-    border-radius: 24px;
-    padding: 40px;
-    color: #fff;
-}
-.stack-2 h2 {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 112%;
-    margin-bottom: 24px;
-    letter-spacing: -4%;
-    margin-top: 32px;
+    font-size: 20px;
 }
 .stack-2 button {
     background-color: #fff;
-    width: 209px;
+    width: 200px;
     min-height: 59px;
     color: #000;
     font-weight: 600;
@@ -75,28 +62,34 @@
     border-right: #000 solid 3px;
     border-bottom: #000 solid 3px;
     border-radius: 18px;
-    margin-top: 62px;
-}
-.stack-3 {
-    width: 421.33px;
-    height: 399px;
-    background-color: #fff;
-    border: 1px solid #dbdbdb;
-    border-radius: 24px;
-    padding: 40px;
-}
-.stack-3 h2 {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 112%;
-    margin-bottom: 24px;
-    letter-spacing: -4%;
-    margin-top: 32px;
+    margin-top: auto;
+    cursor: pointer;
 }
 .stack-3 .list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-top: 32px;
+    gap: 16px;
+    margin-top: auto;
+}
+.stack-3 .list img {
+    width: 100%;
+    height: auto;
+}
+.stack-1 img[alt^="Wallet"], 
+.stack-2 img[alt^="Wallet"], 
+.stack-3 img[alt^="Wallet"] {
+    width: 60px; /* Resize the wallet icons if necessary */
+    height: auto;
+}
 
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .stack-content {
+        flex-direction: column;
+    }
+}
+@media (max-width: 480px) {
+    .stack-1 .subs {
+        grid-template-columns: 1fr; /* 1 column grid for very small screens */
+    }
 }
