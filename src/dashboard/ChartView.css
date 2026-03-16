@@ -1,0 +1,24 @@
+.chart-view-container {
+    padding: 24px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-header h2 {
+    font-size: 18px;
+    color: var(--primary);
+    margin: 0 0 24px 0;
+    font-weight: 600;
+}
+
+.donut-wrapper {
+    flex-grow: 1;
+    position: relative;
+    /* This ensures Chart.js respects the container size */
+    min-height: 250px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

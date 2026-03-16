@@ -1,0 +1,78 @@
+/* .action {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+.card-a, .card-b, .card-c {
+    width: 384px;
+    height: 88px;
+    background-color: #fff;
+    border: #ECEFF2 1px solid;
+    border-radius: 12px;
+    padding: 20px;
+}
+label {
+    display: flex;
+    gap: 12px;
+} */
+.action-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.action-card {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #ECEFF2;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+}
+
+.action-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Colors matching your Figma */
+.icon-green { background-color: #e8f7f0; color: #2ecc71; }
+.icon-red { background-color: #fcebeb; color: #e74c3c; }
+.icon-purple { background-color: #f3f0ff; color: #7248ee; font-size: 24px; }
+
+.icon-wrapper img {
+    width: 24px;
+    height: 24px;
+}
+
+.action-text h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.action-text p {
+    margin: 0;
+    font-size: 13px;
+    color: #8c9eae;
+}
+
+@media (max-width: 768px) {
+    .action-container {
+        flex-direction: column;
+    }
+}

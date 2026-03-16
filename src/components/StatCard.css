@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 .stat-card {
     flex: 1;
     background: #fff;
     padding: 1rem;
     border-radius: 12px;
-    border: 2px solid #000;
-    box-shadow: 4px 4px 0 #000;
-    width: 220px;
+    border: 1px solid #eceff2;
+    width: 384px;
+    height: 120px;
     text-align: left;
 }
 .stat-header {
@@ -13,18 +14,20 @@
     align-items: center;
     gap: 8px;
 }
-.stat-icon {
-    font-size: 1.4rem;
-}
 .stat-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--primary);
+    color: #516778;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
 }
 .stat-amount {
-    font-size: 1.4rem;
+    font-size: 36px;
     font-weight: bold;
+    font-family: "DM Sans", sans-serif;
     margin: 8px 0;
+    line-height: 44px;
+    letter-spacing: -2%;
 }
 .stat-change {
     font-size: 0.9rem;
