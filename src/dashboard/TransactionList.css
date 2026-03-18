@@ -3,12 +3,21 @@
     border: 1px solid #ECEFF2;
     border-radius: 12px;
     padding: 24px;
-    width: 794px;
+    /* CHANGED: Let the parent decide the width instead of 794px */
+    width: 100%; 
     box-sizing: border-box;
-    /* This matches the height of your chart to keep the layout even */
     min-height: 470px; 
 }
 
+/* ... keep your other table styles ... */
+
+.table-wrapper {
+    max-height: 350px; 
+    overflow-y: auto;
+    /* NEW: Add horizontal scrolling for tiny screens so it doesn't break the layout */
+    overflow-x: auto; 
+    padding-right: 8px; 
+}
 .transaction-header h2 {
     font-size: 18px;
     color: var(--primary);

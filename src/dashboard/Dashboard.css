@@ -32,7 +32,9 @@ body {
 .row-2 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: stretch;
 }
 /* Card styles */
 .card {
@@ -78,11 +80,19 @@ form button:hover {
   background-color: var(--light);
 }
 .chart-card {
-  width: 385px; 
+  /* Instead of a hard width, this tells it to ideally be 385px, but shrink if needed */
+  flex: 1 1 350px; 
   background-color: #fff;
   border: #ECEFF2 1px solid;
   border-radius: 12px;
   height: 470px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.transactions-card {
+  flex: 2 1 500px; /* Takes up the remaining space but wraps if less than 500px */
+  max-width: 100%;
+  min-width: 0; /* Critical for preventing tables from stretching out of bounds */
 }
 .stats-row {
   display: flex;
@@ -132,17 +142,40 @@ select {
   margin-bottom: 2rem;
 }
 
-
+/* --- MOBILE RESPONSIVE RULES --- */
+@media (max-width: 900px) {
+  /* On tablets, stack the chart and transactions */
+  .row-2 {
+    flex-direction: column;
+  }
+  .chart-card, .transactions-card {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}
 
 @media (max-width: 768px) {
-  .row {
+  /* Stack the greeting and month filter */
+  .greeting {
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .greeting select {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  /* Stack the stat cards vertically */
+  .stats-row {
+    flex-direction: column;
+    gap: 16px;
   }
 
   .card {
-    flex: 1 1 100%;
     max-width: 100%;
+    width: 100%;
   }
 
   .navbar {
@@ -156,11 +189,11 @@ select {
     gap: 0.75rem;
   }
 
-  form
-
+  /* Make form inputs take up the whole width on mobile */
   form input,
   form select,
   form button {
-    width: 80%;
+    width: 100%;
   }
 }
+
