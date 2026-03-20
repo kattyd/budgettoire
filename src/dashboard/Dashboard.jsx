@@ -84,14 +84,14 @@ function Dashboard() {
       <div className="container">
         <div className="greeting">
           <h1>Hello, {user?.displayName || "Pookie"}!</h1>
-          <select value={monthFilter} onChange={(e) => setMonthFilter(e.target.value)}>
+          {/* <select value={monthFilter} onChange={(e) => setMonthFilter(e.target.value)}>
             <option value="all">All months</option>
             {Array.from({ length: 12 }).map((_, i) => (
               <option key={i} value={i}>
                 {new Date(0, i).toLocaleString("default", { month: "long"})}
               </option>
             ))}
-          </select>
+          </select> */}
         </div>
         
         <div className="row stats-row">
