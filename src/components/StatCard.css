@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 .stat-card {
-    flex: 1;
-    background: #fff;
-    padding: 1rem;
-    border-radius: 12px;
-    border: 1px solid #eceff2;
-    width: 384px;
-    height: 120px;
+    flex: 1 1 1%;
+  max-width: 48%;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: #ECEFF2 1px solid;
+  border-radius: 12px;
+  min-width: 300px;
+  box-sizing: border-box;
     text-align: left;
 }
 .stat-header {
@@ -37,4 +39,11 @@
 }
 .stat-change.negative {
     color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .stat-card {
+        max-width: 100%;
+        width: 100%;
+    }
 }

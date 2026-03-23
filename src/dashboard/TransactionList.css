@@ -121,10 +121,10 @@
 /* --- OVERFLOW AND SCROLLBAR STYLES --- */
 
 .table-wrapper {
-    /* You can adjust this height to perfectly match your chart's height */
     max-height: 350px; 
     overflow-y: auto;
-    padding-right: 8px; /* Adds breathing room so the scrollbar doesn't touch the text */
+    padding-right: 8px;
+    -webkit-overflow-scrolling: touch; 
 }
 
 /* Make the headers sticky */
@@ -154,4 +154,37 @@
 
 .table-wrapper::-webkit-scrollbar-thumb:hover {
     background-color: #8c9eae;
+}
+@media (max-width: 768px) {
+    /* 1. Reduce outer padding to give the table more screen space */
+    .transaction-list-container {
+        padding: 16px;
+        min-height: auto; /* Allows the card to shrink if there are only a few transactions */
+    }
+
+    /* 2. Prevent the table from squishing! */
+    .transaction-table {
+        min-width: 550px; /* Forces the table to stay wide, triggering your horizontal scroll */
+    }
+
+    /* 3. Slightly tighten up the spacing inside the cells */
+    .transaction-table th {
+        padding-bottom: 12px;
+    }
+
+    .transaction-table td {
+        padding: 12px 0;
+        font-size: 13px; /* Slightly smaller text for mobile */
+    }
+
+    /* 4. Shrink the avatar badges a tiny bit so they don't dominate the row */
+    .icon-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .desc-cell {
+        gap: 8px; 
+    }
 }

@@ -145,6 +145,9 @@ form button:hover {
 /* --- MOBILE RESPONSIVE RULES --- */
 @media (max-width: 900px) {
   /* On tablets, stack the chart and transactions */
+  .container{
+    margin: 1rem;
+  }
   .row-2 {
     flex-direction: column;
   }
