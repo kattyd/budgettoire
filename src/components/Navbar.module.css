@@ -76,6 +76,45 @@
     font-size: 16px;
     font-weight: 800;
 }
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Spacing between icons and avatar */
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  color: #516778; /* Muted gray/blue for icons */
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.iconBtn:hover {
+  background-color: #f3f0ff;
+  color: #7248ee;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #ECEFF2;
+  margin-left: 8px; /* Extra space before the avatar */
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Mobile Responsiveness */
 @media (max-width: 900px) {

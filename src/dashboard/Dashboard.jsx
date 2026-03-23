@@ -80,7 +80,7 @@ function Dashboard() {
 
   return (
     <>
-      <Navbar hideLinks={true} authMode="text" customText="track money, better future" />
+      <Navbar hideLinks={true} authMode="profile" user={user} />
       <div className="container">
         <div className="greeting">
           <h1>Hello, {user?.displayName || "Pookie"}!</h1>

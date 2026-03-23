@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
+import { FiSettings, FiBell } from "react-icons/fi"
 
-function Navbar({ hideLinks = false, authMode = "buttons", customText }) {
+function Navbar({ hideLinks = false, authMode = "buttons", customText, user }) {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
@@ -36,6 +37,23 @@ function Navbar({ hideLinks = false, authMode = "buttons", customText }) {
         {authMode === "text" && (
           <div className={styles.customText}>
             {customText}
+          </div>
+        )}
+
+        {authMode === "profile" && (
+          <div className={styles.profileSection}>
+            <button className={styles.iconBtn}>
+              <FiSettings />
+            </button>
+            <button className={styles.iconBtn}>
+              <FiBell />
+            </button>
+            <div className={styles.avatar}>
+              <img 
+                src={user?.photoURL || `https://ui-avatars.com/api/?name=${user?.displayName || "User"}&background=f3f0ff&color=7248ee`} 
+                alt="User Avatar"
+              />
+            </div>
           </div>
         )}
 
